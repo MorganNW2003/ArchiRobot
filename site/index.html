@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.98.0">
+    <title>ArchiRobot</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
+
+    
+
+    
+
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid" >
+      <i class="bi bi-github"></i>
+      <i class="bi bi-house"></i>
+      <i class="bi bi-book"></i>
+      <a class="navbar-brand" href="index.html">ArchiRobot</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0" >
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+              </svg>
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="https://github.com/MorganNW2003/Archimedes">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+              Link GitHub
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="https://www.itarchimede.it/">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+              </svg>
+              IT Archimede
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%"/> <image href="./static/eln.jpg"></image> </svg>
+        <div class="container">
+          <div class="carousel-caption text-start" style="background-color:black; opacity:0.9; border-radius: 10px; margin: 10px; padding-left: 10px;">
+            <h1>Elettronica</h1>
+            <p>Progetti, prototipi e circuiti per tutti i gusti!</p>
+            <p>All'interno di questa Directory trovere molti progetti riguardo l'Elettronica: Elettronica Analogica, Elettronica digitale, Arduino, Raspberry e molto altro ancora!</p>
+            <p>Ovviamente tutto Open source.</p>
+            <p><a class="btn btn-lg btn-primary"  href="https://github.com/MorganNW2003/Archimedes/tree/main/Tutorial/Elettronica">Mostra altro</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%"/><image href="./static/inf.jpg"></image></svg>
+
+        <div class="container">
+          <div class="carousel-caption" style="background-color:black; opacity:0.9; border-radius: 10px; margin: 10px; padding-left: 10px;">
+            <h1>Programmi</h1>
+            <p>Codici per tutti i livelli, dal principiante, all'intermedio fino al più tenace dei programmatori. Dal classico "HELLO WORLD" fino a algoritmi di Deep learning e di Inteligenza artificiale!</p>
+            <p>Cosa aspetti? entra nel link qui sotto e coincia a programmare!</p>
+            <p><a class="btn btn-lg btn-primary" href="https://github.com/MorganNW2003/Archimedes/tree/main/Tutorial/Programmazione">Mostra altro</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%"/><image href="./static/rob.jpg"></image></svg>
+
+        <div class="container">
+          <div class="carousel-caption text-end" style="background-color:black; opacity:0.9; border-radius: 10px; margin: 10px; padding-left: 10px; padding-right: 10px;">
+            <h1>Robotica</h1>
+            <p>Qui troverete tutti i nostri progetti riguardo la Robotica!</p>
+            <p>Come ad esempio Schemi circuitali, PCB progettate da noi, Programmi di Machine learning e deep learning e file 3D stl.</p>
+            <p>Tutto scaricabile dal link qua sotto!</p>
+            <p><a class="btn btn-lg btn-primary" href="https://github.com/MorganNW2003/Archimedes/tree/main/Tutorial/Robotica">Mostra altro</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="./static/itarchimede.jpg" /></svg>
+        
+        <h2 class="fw-normal">Chi siamo?</h2>
+        <p>Noi siamo un team di ragazzi e ragazze di diverse età provenienti dall'Istitituto Tecnico Archimede, con un obitivo comune, tanti sogni e troppe ambizioni!</p>
+        <p><a class="btn btn-secondary" href="https://www.itarchimede.it/">Maggiori info &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="./static/catania.jpg" /></svg>
+
+        <h2 class="fw-normal">Da dove veniamo?</h2>
+        <p>La città di Catania è situata nel sud-est della Sicilia, sulla costa bagnata dal mar Ionio, a soli venti minuti dal vulcano attivo più alto d'Europa, l'Etna (e il suo Parco) e da Taormina, "la perla dello Ionio". Katane fu fondata dai Greci nel 729 a. C., e conquistata dai Romani nel 263 d.C..</p>
+        <p><a class="btn btn-secondary" href="https://www.comune.catania.it/il-comune/uffici/catania-film-commission/il-set-catania/la-citt-di-catania/">Maggiori info &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="./static/sonny.jpg" /></svg>
+
+        <h2 class="fw-normal">Perché lo facciamo?</h2>
+        <p>L'Archimede vanta una lunga tradizione nelle competizioni nazionali e internazionali di robotica, nel 2021 abbiamo compiuto "20 anni di robotica", e non vogliamomica fermarci qui! <br> In descrizione trovate il libro scritto dal prof. Domenico Ardito "20 anni di robotica 2001-2021, Odissea nella robotica", che ha dato il via a questo sogno.</p>
+        <p><a class="btn btn-secondary" href="https://www.itarchimede.it/images/IT%20Archimede%2020%20anni%20di%20Robotica_addendum3_ok.pdf">Download Libro &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Quali sono le nostre sfide?</h2>
+        <p class="lead">Le nostre sfide rispecchiano quelle che il nostro secolo ci sta presentando da più di 20 anni: Il cambiamento climatico, l’inquinamento, il rinnovabile sono solo alcuni esempi degli obiettivi dell’<a href="https://it.wikipedia.org/wiki/Obiettivi_di_sviluppo_sostenibile">Agenda 2030</a> a cui noi ci ispiriamo per i nostri progetti, ma non sono le uniche. Noi puntiamo sullo sviluppo di strumenti che non danneggiano né l'uomo né la natura, ma anzi, puntiamo nel creare una sinergia tra l’uomo e la tecnologia, in modo da affrontare queste sfide presenti e quelle future.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="./static/sfide.jpg"></image></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">Come realiziamo questi obietivi? </h2>
+        <p class="lead">Noi crediamo concretamente nel lavoro di squadra e nelle sue molteplici funzionalità, questo perché persone tante diverse non permettono solo di migliorare l’organizzazione del lavoro con la relativa divisione del lavoro, ma ogni elemento porta all’interno: innovazione, critica e soprattutto le proprie idee. Portando a un duplice vantaggio, migliorare l’idea di partenza e far crescere il gruppo, portandolo sempre verso la strada della collaborazione e della responsabilizzazione.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="./static/cow.jpg"></image></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">...E per il futuro?</h2>
+        <p class="lead">Per il futuro si vedra'.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="./static/idee.jpg" /></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2022 </p>
+  </footer>
+</main>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>
